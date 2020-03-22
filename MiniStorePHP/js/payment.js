@@ -54,7 +54,7 @@ function pay() {
     		 if (response == "success")
              	 window.location.href = res.result;   
             else
-                  window.location.href = "error.html?error="+response;                        
+                  window.location.href = "error.php?error="+response;                        
         },
     error: function (result) {      
     		             
