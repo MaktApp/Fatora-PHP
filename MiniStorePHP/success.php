@@ -94,9 +94,9 @@ if (checkStatus == undefined) //this parameter has value after checkstatus is do
              
              2. return success page
             */
-             	 window.location.href = "success.html?orderId="+ orderId + "&checkStatus=1";   
+             	 window.location.href = "success.php?orderId="+ orderId + "&checkStatus=1";   
             else
-                  window.location.href = "error.html?error="+response;                        
+                  window.location.href = "error.php?error="+response;                        
 		        },
 		    error: function (result) {   
 		            alert("error: " + result);
