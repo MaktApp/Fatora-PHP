@@ -4,10 +4,7 @@
        addTransaction();
  
 
- // This function is called when the customer clicks on pay button,
-// the function initializes new order of customer 
-// and save it in database as waiting for complete payment process 
-// then after the order has a unique number, the function requests checkout page, 
+// the function requests checkout page, 
 // If the result of the response was successfully, the function redirect to payment page
 // If the result of the response was failed, the function redirect to error page with message
 
