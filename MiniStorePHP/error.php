@@ -3,30 +3,13 @@
     <head>
      <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MiniStoreJS</title>
+    <title>MiniStorePHP</title>
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="icon" href="images/fatora.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/fatora.ico" type="image/x-icon" />
     
     <meta charset="UTF-8"><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="js/payment.js"></script>
-    <script type="text/javascript">
-$(document).ready(function(){
 
-var error = getUrlVars()["error"];
-$("#error").html(window.unescape(error));
-
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-});
-
-</script>
 
 <style>
     
@@ -56,7 +39,14 @@ function getUrlVars() {
 	   <div class = "col-md-4">
 	       <i class="fa fa-times-circle-o fa-6" aria-hidden="true"></i>
            <h3 class = "center">Failure has done!</h3>
-           <span id = "error" class = "center"> </span>
+           <span id = "error" class = "center"> 
+           <?php 
+                if ( isset($_REQUEST['msg']))
+                {
+                    echo $_REQUEST['msg'];
+                }
+                ?>
+           </span>
 	   </div>
 	   <div class = "col-md-4">
 	       
